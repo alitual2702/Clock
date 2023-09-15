@@ -1,0 +1,250 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
+    background-color: #792424;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.con{
+    width: 400px;
+    background: url(clock.png);
+    border: 1px solid black;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px black, inset 2px 2px 25px rgb(0, 0, 0);
+    height: 400px;
+}
+
+.con::before{
+    content: '';
+    width: 15px;
+    position: absolute;
+    left:50% ;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    
+    background-color: #fff;
+    height: 15px;
+    border-radius: 50%;
+
+}
+.hour , .minute , .second
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 15px;
+    z-index: -1;
+    border: none;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+}
+.hr{
+    width: 7px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 120px;
+    transform-origin: bottom;
+    z-index: 10;
+    background-color: black;
+}
+.min{
+    width: 5px;
+    transform-origin: bottom;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 135px;
+    background-color: rgb(0, 0, 0);
+    z-index: -2;
+}
+.sec{
+    width: 3px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 150px;
+    transform-origin: bottom;
+    background-color: rgb(0, 0, 0);
+    z-index: -2;
+}
+.curse{
+    width: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: white;
+    transition: 0.1s ease;
+}
+.curse::before{
+   content: '';
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   border-radius: 50%;
+   width: 25px;
+   height: 25px;
+   background: transparent;
+   border: 1px solid white;
+}
+.dark{
+    background-color: black;
+    transition: 0.3s ease;
+    color: white;
+}
+.dark .hr ,.dark .min,.dark .sec{
+    background-color: white;
+    transition: 0.3s ease;
+}
+.dark .con
+{
+    transition: 0.3s ease;
+    box-shadow: 1px 1px 8px rgb(255, 255, 255), inset 2px 2px 15px rgb(247, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.main{
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+   
+.main::before{
+    content: "";
+   
+    height: 100%;
+    position: absolute;
+    left: 0;
+    animation: left-anime;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(255, 0, 0,0.8);
+}
+.main::after
+{
+    content: "";
+    
+    height: 100%;
+    
+    position: absolute;
+    right: 0;
+    animation-name: right-anime;
+    animation-duration: 8s;
+    
+    animation-iteration-count: 1;
+    
+    top: 0;
+    
+    background-color: rgb(255, 0, 0,0.8);
+}
+@keyframes left-anime {
+    0%{
+      width:50%;
+    
+    }
+    100%{
+      width: 0%;
+     border-top-right-radius:50% ;
+     border-bottom-right-radius: 50%;
+      
+    }
+    
+}
+@keyframes right-anime {
+    0%{
+      width: 50%;
+     
+    }
+    100%{
+      width: 0%;
+      border-top-left-radius:50%;
+      border-bottom-left-radius: 50%;
+     
+    }
+    
+}
+.container{
+    width: 100px;
+    height: 100px;
+    animation-name: box-anime;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  
+    background: radial-gradient(rgb(59, 59, 59),red);
+    z-index: -100;
+    border-radius: 50%;
+    box-shadow: 3px 3px 36px black ,
+    
+    3px 3px 36px rgb(255, 0, 0,0.2);
+}
+@keyframes box-anime {
+    0%
+    {
+        border-radius: 0%;
+        width: 300px;
+       background-color: red;
+    }
+    100%
+    {
+        width: 100px;
+        box-shadow: 3px 3px 36px black ,
+        3px 3px 36px rgb(255, 0, 0,0.2);
+        border-radius: 50%;
+        background: radial-gradient(rgb(59, 59, 59),red);
+        
+    }
+}*/

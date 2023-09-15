@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="curse"></div>
+   <div class="con">
+    <div class="hour">
+        <div class="hr"></div>
+    </div>
+    <div class="minute">
+        <div class="min"></div>
+    </div>
+    <div class="second">
+        <div class="sec"></div>
+    </div>
+   </div>
+   
+<script>
+    var dar = document.querySelector('.con');
+    var hour = document.querySelector('.hr');
+    var minute = document.querySelector('.min');
+    var second = document.querySelector('.sec');
+
+  function displayTime(){
+    var cel = new Date();
+    var hr = cel.getHours();
+    var min = cel.getMinutes();
+    var sec= cel.getSeconds();
+       /* 12hour = 360deg
+       1hour = 360/12 = (30deg)
+       h hour = (30h) + min/2
+       (but when the hour is moving then minutes is also moving
+       60minutes = 30deg
+       1 min = 30/60 = 1/2deg means half degree
+       half minuter (min/2)
+       */
+    var degh = 30*hr + min/2;
+       /*
+       60minutes = 360degree
+       1min = 360/60 = 6deg
+       */
+    var degm =  6*min;
+       /*60seconds = 360degree
+       1sec = 360/60 = 6deg*/
+    var degs = 6*sec;
+
+    hour.style.transform = `rotate(${degh}deg)`;
+    minute.style.transform = `rotate(${degm}deg)`;
+    second.style.transform = `rotate(${degs}deg)`;
+  }
+   setInterval(displayTime , 1000)
+  var cur = document.querySelector('.curse')
+   document.addEventListener('mousemove' , (e) =>{
+    cur.style.top = `${e.pageY}px`;
+    cur.style.left = `${e.pageX}px`;
+   
+   })
+   dar.addEventListener('click', () => {
+     var a = document.body;
+     a.classList.toggle('dark')
+   })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <div class="container"></div>-->
+</body>
+</html>
